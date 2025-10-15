@@ -1,0 +1,8 @@
+/output/
+/cache/
+__pycache__/
+*.pyc
+*.pyd
+*.swp
+.doit.db
+.DS_Store
