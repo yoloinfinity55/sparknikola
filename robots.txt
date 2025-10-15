@@ -1,0 +1,4 @@
+Sitemap: https://yoloinfinity55.github.io/sparknikola/sitemapindex.xml
+
+User-Agent: *
+Host: yoloinfinity55.github.io

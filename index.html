@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="This is a demo site for Nikola.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spark Nikola</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://yoloinfinity55.github.io/sparknikola/">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/my-third-nikola-post/" type="text/html">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href=".">
+
+            <span id="blog-title">Spark Nikola</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav"></ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="categories/" class="nav-link">Tags</a>
+                </li>
+<li class="nav-item">
+<a href="rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+    
+        
+
+    
+        
+    <div class="postindex">
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/my-third-nikola-post/" class="u-url">My Third Nikola Post</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Infinity55
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/my-third-nikola-post/" rel="bookmark">
+            <time class="published dt-published" datetime="2025-10-15T15:36:32-04:00" itemprop="datePublished" title="2025-10-15 15:36">2025-10-15 15:36</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Write your post here.</p>
+<p>You've encountered a configuration detail, not a real error. The good news is that your post was created successfully.</p>
+<p>Let's break down what happened and how to fix it for the future.</p>
+<p>The Problem: What is $EDITOR?</p>
+<p>You used the command nikola new_post -e.</p>
+<p>The -e flag is a shortcut that tells Nikola: "After you create the post file, please edit it for me by opening it in my default text editor."</p>
+<p>Your system responded by saying it doesn't have a default editor configured. The $EDITOR environment variable is the system setting that stores this preference.</p>
+<p>Because it didn't know which program to open (like VS Code, Vim, or Nano), Nikola stopped after creating the file and showed you that message.</p>
+<p>The Immediate Solution: Edit Manually</p>
+<p>The file is ready and waiting for you. Just like with your first post, you can simply:</p>
+<p>Go to your code editor.</p>
+<p>Open the newly created file: posts/my-second-nikola-post.rst.</p>
+<p>Start writing your content.</p>
+<p>The Permanent Fix: Set Your Default Editor</p>
+<p>If you want the -e shortcut to work in the future, you can tell your Mac that VS Code is your preferred editor for the command line.</p>
+<p>Open your terminal.</p>
+<p>Run this command: This command adds a line to your shell's configuration file (.zshrc, which is the default for modern macOS).</p>
+<p>code
+Bash
+download
+content_copy
+expand_less
+echo 'export EDITOR="code --wait"' &gt;&gt; ~/.zshrc</p>
+<p>code is the command for VS Code.</p>
+<p>The --wait flag is important: it tells the terminal to wait until you have closed the file in VS Code before it continues.</p>
+<p>Apply the changes. For the change to take effect, you need to either close and reopen your terminal or run this command in your existing terminal window:</p>
+<p>code
+Bash
+download
+content_copy
+expand_less
+source ~/.zshrc</p>
+<p>Now, the next time you run nikola new_post -e, it will automatically open the new file in VS Code.</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/my-second-nikola-post/" class="u-url">My Second Nikola Post</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Infinity55
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/my-second-nikola-post/" rel="bookmark">
+            <time class="published dt-published" datetime="2025-10-15T15:32:56-04:00" itemprop="datePublished" title="2025-10-15 15:32">2025-10-15 15:32</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Write your post here.</p>
+<p>RachelsCreative2020</p>
+<p>SparkNikola</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/my-first-nikola-blog-post/" class="u-url">My First Nikola Blog Post</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Infinity55
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/my-first-nikola-blog-post/" rel="bookmark">
+            <time class="published dt-published" datetime="2024-10-15T15:24:04-04:00" itemprop="datePublished" title="2024-10-15 15:24">2024-10-15 15:24</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <section id="hello-world"><h2>Hello, world!</h2>
+<p>This is my very first post on my new Nikola site. I'm excited to get started.</p>
+<p>You can use <strong>bold text</strong>, <em>italic text</em>, and even create links like this one to the <a class="reference external" href="https://getnikola.com/">Nikola website</a>.</p>
+<p>Now, let's see how this looks.</p>
+<p>Write your post here.</p>
+</section>
+</div>
+            </article>
+</div>
+    
+
+    
+    
+
+
+    
+
+
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2025         <a href="mailto:yoloinfinity55@gmail.com">Infinity55</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>
