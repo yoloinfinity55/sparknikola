@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spark Nikola</title><link>https://yoloinfinity55.github.io/sparknikola/</link><description>This is a demo site for Nikola.</description><atom:link href="https://yoloinfinity55.github.io/sparknikola/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:yoloinfinity55@gmail.com"&gt;Infinity55&lt;/a&gt; </copyright><lastBuildDate>Wed, 15 Oct 2025 19:56:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>My Third Nikola Post</title><link>https://yoloinfinity55.github.io/sparknikola/posts/my-third-nikola-post/</link><dc:creator>Infinity55</dc:creator><description>&lt;p&gt;Write your post here.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Spark Nikola</title><link>https://yoloinfinity55.github.io/sparknikola/</link><description>This is a demo site for Nikola.</description><atom:link href="https://yoloinfinity55.github.io/sparknikola/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:yoloinfinity55@gmail.com"&gt;Infinity55&lt;/a&gt; </copyright><lastBuildDate>Wed, 15 Oct 2025 20:42:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>My Third Nikola Post</title><link>https://yoloinfinity55.github.io/sparknikola/posts/my-third-nikola-post/</link><dc:creator>Infinity55</dc:creator><description>&lt;p&gt;Write your post here.&lt;/p&gt;
 &lt;p&gt;You've encountered a configuration detail, not a real error. The good news is that your post was created successfully.&lt;/p&gt;
 &lt;p&gt;Let's break down what happened and how to fix it for the future.&lt;/p&gt;
 &lt;p&gt;The Problem: What is $EDITOR?&lt;/p&gt;
@@ -31,9 +31,55 @@ download
 content_copy
 expand_less
 source ~/.zshrc&lt;/p&gt;
-&lt;p&gt;Now, the next time you run nikola new_post -e, it will automatically open the new file in VS Code.&lt;/p&gt;</description><guid>https://yoloinfinity55.github.io/sparknikola/posts/my-third-nikola-post/</guid><pubDate>Wed, 15 Oct 2025 19:36:32 GMT</pubDate></item><item><title>My Second Nikola Post</title><link>https://yoloinfinity55.github.io/sparknikola/posts/my-second-nikola-post/</link><dc:creator>Infinity55</dc:creator><description>&lt;p&gt;Write your post here.&lt;/p&gt;
-&lt;p&gt;RachelsCreative2020&lt;/p&gt;
-&lt;p&gt;SparkNikola&lt;/p&gt;</description><guid>https://yoloinfinity55.github.io/sparknikola/posts/my-second-nikola-post/</guid><pubDate>Wed, 15 Oct 2025 19:32:56 GMT</pubDate></item><item><title>My First Nikola Blog Post</title><link>https://yoloinfinity55.github.io/sparknikola/posts/my-first-nikola-blog-post/</link><dc:creator>Infinity55</dc:creator><description>&lt;section id="hello-world"&gt;
+&lt;p&gt;Now, the next time you run nikola new_post -e, it will automatically open the new file in VS Code.&lt;/p&gt;</description><guid>https://yoloinfinity55.github.io/sparknikola/posts/my-third-nikola-post/</guid><pubDate>Wed, 15 Oct 2025 19:36:32 GMT</pubDate></item><item><title>My Second Nikola Post</title><link>https://yoloinfinity55.github.io/sparknikola/posts/my-second-nikola-post/</link><dc:creator>Infinity55</dc:creator><description>&lt;p&gt;That is a fantastic question that gets to the very heart of this specific workflow. You've noticed that Nikola is doing something different from the standard Git process you might be used to.&lt;/p&gt;
+&lt;p&gt;Here is the direct answer, followed by the crucial explanation of why.&lt;/p&gt;
+&lt;p&gt;The Direct Answer&lt;/p&gt;
+&lt;p&gt;No, you should not use "git push origin main" to update your live website. In your current setup, the main branch is effectively unused and outdated.&lt;/p&gt;
+&lt;p&gt;The difference between src and main is that src is your new, primary branch for your website's source code (your .rst files, conf.py, etc.), while main was just a temporary starting point.&lt;/p&gt;
+&lt;p&gt;The Critical Difference: Source Code vs. Generated Site&lt;/p&gt;
+&lt;p&gt;This is the most important concept: your Nikola project has two different parts, and they should be stored separately.&lt;/p&gt;
+&lt;p&gt;The Source (Your Recipe): This is the code you write. It's your .rst posts, your configuration in conf.py, and your images. This is your "work". In your new setup, this lives in the src branch.&lt;/p&gt;
+&lt;p&gt;The Output (The Cake): This is the final, generated website that Nikola builds. It's a folder full of HTML, CSS, and JS files. Your browser can read it, but you never edit it directly. This lives in the master branch.&lt;/p&gt;
+&lt;p&gt;Think of it this way: You don't want to store your raw ingredients and your finished cake in the same box.&lt;/p&gt;
+&lt;p&gt;Branch Name     Its Purpose     What's Inside It?       How Do You Update It?
+src     Your Source Code        .rst files, conf.py     You work here. Use git add, git commit, git push origin src to back it up.
+master  Your Live Website       The contents of the output/ folder (HTML, CSS)  Only with nikola github_deploy. This command builds the site and pushes it here.
+main    Unused  An old version of your source code.     You don't. You can safely ignore it or even delete it.
+What git push origin main Would Do&lt;/p&gt;
+&lt;p&gt;If you were to run git push origin main, you would be pushing your source code to the main branch on GitHub. Since your GitHub Pages is configured to look at the master branch, your live website would not change at all.&lt;/p&gt;
+&lt;p&gt;The Correct Workflow Summarized&lt;/p&gt;
+&lt;p&gt;Your process for updating your site will always be this:&lt;/p&gt;
+&lt;p&gt;Make sure you are on your source branch:&lt;/p&gt;
+&lt;p&gt;code
+Bash
+download
+content_copy
+expand_less
+git checkout src&lt;/p&gt;
+&lt;p&gt;Create a new post or edit an existing one.&lt;/p&gt;
+&lt;p&gt;code
+Bash
+download
+content_copy
+expand_less
+nikola new_post
+# ...then edit the .rst file...&lt;/p&gt;
+&lt;p&gt;Deploy the website. This is the magic command that builds the site and pushes it to the master branch.&lt;/p&gt;
+&lt;p&gt;code
+Bash
+download
+content_copy
+expand_less
+nikola github_deploy&lt;/p&gt;
+&lt;p&gt;(Optional, but good practice) Separately, back up the changes to your source code.&lt;/p&gt;
+&lt;p&gt;code
+Bash
+download
+content_copy
+expand_less
+git add .
+git commit -m "Added a new blog post about X"
+git push origin src&lt;/p&gt;</description><guid>https://yoloinfinity55.github.io/sparknikola/posts/my-second-nikola-post/</guid><pubDate>Wed, 15 Oct 2025 19:32:56 GMT</pubDate></item><item><title>My First Nikola Blog Post</title><link>https://yoloinfinity55.github.io/sparknikola/posts/my-first-nikola-blog-post/</link><dc:creator>Infinity55</dc:creator><description>&lt;section id="hello-world"&gt;
 &lt;h2&gt;Hello, world!&lt;/h2&gt;
 &lt;p&gt;This is my very first post on my new Nikola site. I'm excited to get started.&lt;/p&gt;
 &lt;p&gt;You can use &lt;strong&gt;bold text&lt;/strong&gt;, &lt;em&gt;italic text&lt;/em&gt;, and even create links like this one to the &lt;a class="reference external" href="https://getnikola.com/"&gt;Nikola website&lt;/a&gt;.&lt;/p&gt;
