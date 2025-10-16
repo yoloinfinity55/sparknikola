@@ -1,0 +1,15 @@
+<%include file="base_header.tmpl" />
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+% for post in posts:
+    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <div class="p-6">
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="${post.permalink()}" class="text-primary hover:text-primary/80">${post.title()}</a>
+            </h2>
+            <time class="text-gray-500 text-sm block mb-2">${post.formatted_date(date_format)}</time>
+            <p class="text-gray-700">${post.text(teaser_only=True, strip_html=True)[:200]}...</p>
+            <a href="${post.permalink()}" class="text-primary hover:underline mt-4 inline-block">阅读更多 →</a>
+        </div>
+    </article>
+% endfor
+</div>
