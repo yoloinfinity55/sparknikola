@@ -1,0 +1,4 @@
+Sitemap: https://minijohn.github.io/spark-nikola/sitemapindex.xml
+
+User-Agent: *
+Host: minijohn.github.io

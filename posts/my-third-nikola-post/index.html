@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Third Nikola Post</title>
+<link href="../../assets/css/tailwind.css" rel="stylesheet" type="text/css">
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm"><nav class="container mx-auto px-4 py-4"><div class="flex items-center justify-between">
+                <a href="https://minijohn.github.io/spark-nikola/" class="text-2xl font-bold text-primary">Spark Nikola</a>
+                <ul class="flex space-x-6">
+<li><a href="https://minijohn.github.io/spark-nikola/" class="text-gray-700 hover:text-primary">Home</a></li>
+                    <li><a href="https://minijohn.github.io/spark-nikola/archive.html" class="text-gray-700 hover:text-primary">Archive</a></li>
+                    <li><a href="https://minijohn.github.io/spark-nikola/categories/" class="text-gray-700 hover:text-primary">Categories</a></li>
+                </ul>
+</div>
+        </nav></header><main class="container mx-auto px-4 py-8"><div class="prose max-w-none">
+    <article><header class="mb-8"><h1 class="text-4xl font-bold text-gray-900 mb-4">My Third Nikola Post</h1>
+            <div class="flex items-center text-gray-600 text-sm">
+                <time datetime="2025-10-15T15:36:32-04:00">2025-10-15 15:36</time>
+</div>
+        </header><div class="prose-content">
+            <p>Write your post here.</p>
+<p>You've encountered a configuration detail, not a real error. The good news is that your post was created successfully.</p>
+<p>Let's break down what happened and how to fix it for the future.</p>
+<p>The Problem: What is $EDITOR?</p>
+<p>You used the command nikola new_post -e.</p>
+<p>The -e flag is a shortcut that tells Nikola: "After you create the post file, please edit it for me by opening it in my default text editor."</p>
+<p>Your system responded by saying it doesn't have a default editor configured. The $EDITOR environment variable is the system setting that stores this preference.</p>
+<p>Because it didn't know which program to open (like VS Code, Vim, or Nano), Nikola stopped after creating the file and showed you that message.</p>
+<p>The Immediate Solution: Edit Manually</p>
+<p>The file is ready and waiting for you. Just like with your first post, you can simply:</p>
+<p>Go to your code editor.</p>
+<p>Open the newly created file: posts/my-second-nikola-post.rst.</p>
+<p>Start writing your content.</p>
+<p>The Permanent Fix: Set Your Default Editor</p>
+<p>If you want the -e shortcut to work in the future, you can tell your Mac that VS Code is your preferred editor for the command line.</p>
+<p>Open your terminal.</p>
+<p>Run this command: This command adds a line to your shell's configuration file (.zshrc, which is the default for modern macOS).</p>
+<p>code
+Bash
+download
+content_copy
+expand_less
+echo 'export EDITOR="code --wait"' &gt;&gt; ~/.zshrc</p>
+<p>code is the command for VS Code.</p>
+<p>The --wait flag is important: it tells the terminal to wait until you have closed the file in VS Code before it continues.</p>
+<p>Apply the changes. For the change to take effect, you need to either close and reopen your terminal or run this command in your existing terminal window:</p>
+<p>code
+Bash
+download
+content_copy
+expand_less
+source ~/.zshrc</p>
+<p>Now, the next time you run nikola new_post -e, it will automatically open the new file in VS Code.</p>
+        </div>
+
+        <nav class="mt-12 pt-8 border-t border-gray-200"><div class="flex justify-between">
+                <a href="../my-second-nikola-post/" class="text-primary hover:underline">
+                    ← My Second Nikola Post
+                </a>
+                <a href="../post-title/" class="text-primary hover:underline ml-auto">
+                    Post Title →
+                </a>
+            </div>
+        </nav></article>
+</div>
+
+
+    </main><footer class="bg-gray-900 text-white mt-12 py-8"><div class="container mx-auto px-4 text-center">
+            <p>© 2025 Spark Nikola. Powered by <a href="https://getnikola.com/" class="text-primary hover:underline">Nikola</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>

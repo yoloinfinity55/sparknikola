@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Second Nikola Post</title>
+<link href="../../assets/css/tailwind.css" rel="stylesheet" type="text/css">
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm"><nav class="container mx-auto px-4 py-4"><div class="flex items-center justify-between">
+                <a href="https://minijohn.github.io/spark-nikola/" class="text-2xl font-bold text-primary">Spark Nikola</a>
+                <ul class="flex space-x-6">
+<li><a href="https://minijohn.github.io/spark-nikola/" class="text-gray-700 hover:text-primary">Home</a></li>
+                    <li><a href="https://minijohn.github.io/spark-nikola/archive.html" class="text-gray-700 hover:text-primary">Archive</a></li>
+                    <li><a href="https://minijohn.github.io/spark-nikola/categories/" class="text-gray-700 hover:text-primary">Categories</a></li>
+                </ul>
+</div>
+        </nav></header><main class="container mx-auto px-4 py-8"><div class="prose max-w-none">
+    <article><header class="mb-8"><h1 class="text-4xl font-bold text-gray-900 mb-4">My Second Nikola Post</h1>
+            <div class="flex items-center text-gray-600 text-sm">
+                <time datetime="2025-10-15T15:32:56-04:00">2025-10-15 15:32</time>
+</div>
+        </header><div class="prose-content">
+            <p>That is a fantastic question that gets to the very heart of this specific workflow. You've noticed that Nikola is doing something different from the standard Git process you might be used to.</p>
+<p>Here is the direct answer, followed by the crucial explanation of why.</p>
+<p>The Direct Answer</p>
+<p>No, you should not use "git push origin main" to update your live website. In your current setup, the main branch is effectively unused and outdated.</p>
+<p>The difference between src and main is that src is your new, primary branch for your website's source code (your .rst files, conf.py, etc.), while main was just a temporary starting point.</p>
+<p>The Critical Difference: Source Code vs. Generated Site</p>
+<p>This is the most important concept: your Nikola project has two different parts, and they should be stored separately.</p>
+<p>The Source (Your Recipe): This is the code you write. It's your .rst posts, your configuration in conf.py, and your images. This is your "work". In your new setup, this lives in the src branch.</p>
+<p>The Output (The Cake): This is the final, generated website that Nikola builds. It's a folder full of HTML, CSS, and JS files. Your browser can read it, but you never edit it directly. This lives in the master branch.</p>
+<p>Think of it this way: You don't want to store your raw ingredients and your finished cake in the same box.</p>
+<p>Branch Name     Its Purpose     What's Inside It?       How Do You Update It?
+src     Your Source Code        .rst files, conf.py     You work here. Use git add, git commit, git push origin src to back it up.
+master  Your Live Website       The contents of the output/ folder (HTML, CSS)  Only with nikola github_deploy. This command builds the site and pushes it here.
+main    Unused  An old version of your source code.     You don't. You can safely ignore it or even delete it.
+What git push origin main Would Do</p>
+<p>If you were to run git push origin main, you would be pushing your source code to the main branch on GitHub. Since your GitHub Pages is configured to look at the master branch, your live website would not change at all.</p>
+<p>The Correct Workflow Summarized</p>
+<p>Your process for updating your site will always be this:</p>
+<p>Make sure you are on your source branch:</p>
+<p>code
+Bash
+download
+content_copy
+expand_less
+git checkout src</p>
+<p>Create a new post or edit an existing one.</p>
+<p>code
+Bash
+download
+content_copy
+expand_less
+nikola new_post
+# ...then edit the .rst file...</p>
+<p>Deploy the website. This is the magic command that builds the site and pushes it to the master branch.</p>
+<p>code
+Bash
+download
+content_copy
+expand_less
+nikola github_deploy</p>
+<p>(Optional, but good practice) Separately, back up the changes to your source code.</p>
+<p>code
+Bash
+download
+content_copy
+expand_less
+git add .
+git commit -m "Added a new blog post about X"
+git push origin src</p>
+        </div>
+
+        <nav class="mt-12 pt-8 border-t border-gray-200"><div class="flex justify-between">
+                <a href="../my-first-nikola-blog-post/" class="text-primary hover:underline">
+                    ← My First Nikola Blog Post
+                </a>
+                <a href="../my-third-nikola-post/" class="text-primary hover:underline ml-auto">
+                    My Third Nikola Post →
+                </a>
+            </div>
+        </nav></article>
+</div>
+
+
+    </main><footer class="bg-gray-900 text-white mt-12 py-8"><div class="container mx-auto px-4 text-center">
+            <p>© 2025 Spark Nikola. Powered by <a href="https://getnikola.com/" class="text-primary hover:underline">Nikola</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>
