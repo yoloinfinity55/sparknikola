@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${title|h}</title>
+    
+    % if description:
+    <meta name="description" content="${description|h}">
+    % endif
+    
+    <link href="/assets/css/tailwind.css" rel="stylesheet" type="text/css">
+    
+    ${mathjax_config}
+    
+    ${extra_head_data}
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="${abs_link('/')}" class="text-2xl font-bold text-primary">${blog_title|h}</a>
+                <ul class="flex space-x-6">
+                    <li><a href="${abs_link('/')}" class="text-gray-700 hover:text-primary">Home</a></li>
+                    <li><a href="${abs_link('/archive.html')}" class="text-gray-700 hover:text-primary">Archive</a></li>
+                    <li><a href="${abs_link('/categories/')}" class="text-gray-700 hover:text-primary">Categories</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mx-auto px-4 py-8">

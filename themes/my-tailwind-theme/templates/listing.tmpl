@@ -1,0 +1,9 @@
+<%include file="base_header.tmpl" />
+<div class="prose max-w-none">
+    <h1>Listings</h1>
+    % if code:
+        ${code}
+    % else:
+        <p class="text-gray-500">No listings yet. Add files to <code>listings/</code> to get started!</p>
+    % endif
+</div>

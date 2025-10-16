@@ -20,10 +20,10 @@ BLOG_AUTHOR = "Infinity55"  # (translatable)
 BLOG_TITLE = "Spark Nikola"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://yoloinfinity55.github.io/sparknikola/"
+SITE_URL = "http://localhost:8000/sparknikola/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "https://yoloinfinity55.github.io/sparknikola/"
+BASE_URL = "http://localhost:8000/sparknikola/"
 BLOG_EMAIL = "yoloinfinity55@gmail.com"
 BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
 
@@ -156,7 +156,8 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootblog4"
+# THEME = "bootblog4"
+THEME = 'my-tailwind-theme'
 
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it
@@ -1350,6 +1351,7 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 # environment but is not recommended for HTTP/2.0 when caching is used.
 # Defaults to True.
 # USE_BUNDLES = True
+USE_BUNDLES = False
 
 # Plugins you don't want to use. Be careful :-)
 # DISABLED_PLUGINS = ["render_galleries"]
